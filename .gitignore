@@ -1,0 +1,20 @@
+# Your manga is not part of the repository
+library/*
+!library/README.txt
+
+# Build output (attach the zip to a GitHub Release instead)
+dist/
+build/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

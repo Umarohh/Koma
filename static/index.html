@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1e1e1e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="icon-192.png">
+  <title>Manga Reader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topbar">
+    <button id="back" class="hidden" title="Back (Esc)">&larr;</button>
+    <h1 id="title">Library</h1>
+    <button id="add" title="Copy a manga folder into the library">+ Add manga</button>
+    <div id="reader-controls" class="hidden">
+      <button id="mode" title="Toggle page / strip mode">Strip mode</button>
+      <button id="fit" title="Toggle fit width / height">Fit: width</button>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <footer id="pager" class="hidden">
+    <button id="prev">&larr; Prev</button>
+    <span id="counter"></span>
+    <button id="next">Next &rarr;</button>
+  </footer>
+
+  <div id="add-dialog" class="dialog hidden">
+    <div class="panel">
+      <h2>Add manga</h2>
+      <p class="hint">Pick a series folder (<code>Series/Chapter/pages</code>, which may also contain
+        <code>.cbz</code> files), a single chapter folder, or one or more <code>.cbz</code> / <code>.zip</code>
+        archives. Everything is copied into <code>library/</code>.</p>
+      <div class="pickers">
+        <label class="file-btn"><input type="file" id="add-files" webkitdirectory directory multiple>Choose folder&hellip;</label>
+        <label class="file-btn"><input type="file" id="add-cbz" accept=".cbz,.zip,application/zip,application/x-cbz" multiple>Choose .cbz files&hellip;</label>
+      </div>
+      <div id="add-summary" class="hint"></div>
+      <label class="field">Series name <input type="text" id="add-series" placeholder="e.g. One Piece"></label>
+      <div class="actions">
+        <span id="add-status" class="hint"></span>
+        <button id="add-cancel">Cancel</button>
+        <button id="add-confirm" class="primary" disabled>Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

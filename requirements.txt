@@ -1,0 +1,2 @@
+pywebview>=5
+pyinstaller>=6   # only needed to build the Windows executable
