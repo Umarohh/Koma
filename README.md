@@ -1,7 +1,8 @@
-# Manga Reader
+# Koma
 
-A small, local manga reader. Point it at a folder of images or `.cbz` files and read them in a
-clean, dark, distraction-free window. Nothing is uploaded anywhere and there is no account.
+An open source, lightweight, simple manga reader. Point it at a folder of images or `.cbz` files
+and read them in a clean, dark, distraction-free window. No accounts, no tracking, nothing
+uploaded anywhere. Plain Python and vanilla JavaScript, with no framework and no database server.
 
 It comes in two flavours:
 
@@ -28,11 +29,11 @@ Supported image formats: jpg, png, gif, webp, avif. `.cbr` (RAR) archives are no
 
 ### Windows executable (no Python needed)
 
-1. Download `MangaReader-win64.zip` from the
+1. Download `Koma-win64.zip` from the
    [Releases page](https://github.com/Umarohh/manga-reader/releases) and unzip it.
-2. Put manga in the `library` folder next to `MangaReader.exe` (see the layout below), or use
-   the **+ Add manga** button inside the app.
-3. Double-click `MangaReader.exe`.
+2. Put manga in the `library` folder next to `Koma.exe` (see the layout below), or use the
+   **+ Add manga** button inside the app.
+3. Double-click `Koma.exe`.
 
 It needs Windows 10 or 11 with the Edge WebView2 runtime, which is already installed on nearly
 every machine. Windows SmartScreen may warn the first time because the exe is not code-signed;
@@ -87,7 +88,7 @@ Both styles can be mixed within a series. After adding files, press F5 in the ap
 
 ```
 pip install pywebview pyinstaller
-python build_exe.py     # -> dist/MangaReader.exe and dist/MangaReader-win64.zip
+python build_exe.py     # -> dist/Koma.exe and dist/Koma-win64.zip
 ```
 
 ## Phone version (no PC needed)
@@ -134,3 +135,7 @@ library/                your manga goes here (ignored by git)
 
 Everything is plain Python and vanilla JavaScript. The only third-party packages are pywebview
 for the desktop window and PyInstaller for building the exe.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

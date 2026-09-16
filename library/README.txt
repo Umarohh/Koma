@@ -1,4 +1,4 @@
-Drop manga into this folder, then press F5 in the app or restart it.
+Drop manga into this folder, then press F5 in Koma or restart it.
 
   library/
     One Piece/

@@ -1,4 +1,4 @@
-// Standalone manga reader: everything runs in the browser, no server needed.
+// Koma (phone version): everything runs in the browser, no server needed.
 // Manga is imported from .cbz/.zip archives or image folders, unpacked with the
 // browser's built-in decompressor, stored in IndexedDB, and read offline.
 // Navigation state lives in the URL hash so refresh/back work; reading progress
@@ -40,7 +40,7 @@ function uid() {
 let dbPromise;
 function db() {
   return dbPromise ??= new Promise((resolve, reject) => {
-    const req = indexedDB.open("manga-reader", 1);
+    const req = indexedDB.open("koma", 1);
     req.onupgradeneeded = () => {
       const d = req.result;
       d.createObjectStore("series", { keyPath: "id" });
@@ -476,7 +476,7 @@ function collectPending() {
 
   const pages = pending.filter((p) => p.kind === "page");
   const needsChapter = pages.some((p) => !p.chapter);
-  const chapters = new Set(pages.map((p) => p.chapter || " ")).size;
+  const chapters = new Set(pages.map((p) => p.chapter || "(untitled)")).size;
   const archives = pending.length - pages.length;
   const bits = [];
   if (pages.length) bits.push(`${pages.length} page${pages.length === 1 ? "" : "s"} in ${chapters} chapter${chapters === 1 ? "" : "s"}`);

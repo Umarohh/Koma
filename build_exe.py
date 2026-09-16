@@ -2,8 +2,8 @@
 
 Requires:  pip install pyinstaller pywebview
 Run:       python build_exe.py
-Output:    dist/MangaReader.exe
-           dist/MangaReader-win64.zip   (exe + empty library folder + README)
+Output:    dist/Koma.exe
+           dist/Koma-win64.zip   (exe + empty library folder + README)
 
 The exe needs no Python on the target machine. It uses the Edge WebView2 runtime,
 which ships with Windows 11 and most Windows 10 installs.
@@ -16,7 +16,7 @@ import zipfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DIST = os.path.join(ROOT, "dist")
-NAME = "MangaReader"
+NAME = "Koma"
 
 
 def main():

@@ -1,6 +1,6 @@
 // Service worker: caches the app shell so the reader opens offline.
 // Strategy: serve from cache, then refresh the cache from the network in the background.
-const CACHE = "manga-reader-v1";
+const CACHE = "koma-v1";
 const ASSETS = ["./", "./index.html", "./app.js", "./style.css", "./manifest.json", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (e) => {

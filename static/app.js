@@ -1,4 +1,4 @@
-// Simple manga reader: library -> chapters -> reader. State is kept in the URL hash
+// Koma: library -> chapters -> reader. State is kept in the URL hash
 // so refresh/back work, and reading progress is kept in localStorage.
 
 const $ = (id) => document.getElementById(id);

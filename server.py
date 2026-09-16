@@ -1,4 +1,4 @@
-"""Tiny manga reader server. No dependencies beyond the Python standard library.
+"""Koma server: a tiny local manga reader. No dependencies beyond the Python standard library.
 
 Library layout (sorted naturally):
     library/<Series>/<Chapter>/<page images>      folder chapter
@@ -286,7 +286,7 @@ class Handler(SimpleHTTPRequestHandler):
 
 def announce(httpd):
     port = httpd.server_address[1]
-    print(f"Manga reader running at http://localhost:{port}  (library: {LIBRARY})")
+    print(f"Koma running at http://localhost:{port}  (library: {LIBRARY})")
 
 
 if __name__ == "__main__":

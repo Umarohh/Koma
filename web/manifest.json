@@ -1,6 +1,6 @@
 {
-  "name": "Manga Reader",
-  "short_name": "Manga",
+  "name": "Koma",
+  "short_name": "Koma",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
