@@ -93,7 +93,7 @@ python build_exe.py     # -> dist/Koma.exe and dist/Koma-win64.zip
 
 ## Phone version (no PC needed)
 
-**Open https://umarohh.github.io/manga-reader/ on your phone.**
+**Open https://umarohh.github.io/Koma/ on your phone.**
 
 It's a standalone build of the reader that runs entirely in the phone's browser. Manga is
 imported from `.cbz` files or images on the phone, unpacked in the browser, stored in the
